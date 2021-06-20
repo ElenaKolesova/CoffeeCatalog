@@ -45,7 +45,7 @@ class CoffeeMenuViewController: UIViewController {
 
 extension CoffeeMenuViewController: UITextFieldDelegate {
     func coffeeSelected () {
-
+        print("test")
     }
 }
 
