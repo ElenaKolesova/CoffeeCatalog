@@ -9,5 +9,5 @@
 
 struct Coffee {
         let coffeeName: String
-        let coffeeImage: String
+        let coffeeImage: Int
 }
