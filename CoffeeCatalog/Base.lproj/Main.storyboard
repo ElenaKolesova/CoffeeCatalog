@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kJl-Yw-Li8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="logInViewController" customModule="CoffeeCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nY5-sV-gGj">
+                                <rect key="frame" x="30" y="433" width="354" height="84"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6l-Gg-Hmr">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartInsertDeleteType="no" textContentType="username"/>
+                                    </textField>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZ2-dJ-ubz">
+                                        <rect key="frame" x="0.0" y="50" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8C-Qi-RGM">
+                                <rect key="frame" x="157" y="561" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.95484322310000003" green="0.82845312360000001" blue="0.67523425820000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9sM-EY-Le1"/>
+                                    <constraint firstAttribute="height" constant="40" id="Ggv-X4-Jkf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" red="0.29440486430000001" green="0.2184086442" blue="0.19136390089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hz9-aC-Gd7"/>
+                                    <segue destination="yeR-2n-qS0" kind="show" id="kfR-Es-bF2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3P4-xa-L6l">
+                                <rect key="frame" x="149" y="621" width="116" height="30"/>
+                                <state key="normal" title="Забыли пароль?">
+                                    <color key="titleColor" red="0.74901960784313726" green="0.66274509803921566" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6LX-yl-nBq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="Q8C-Qi-RGM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4hi-m4-L0d"/>
+                            <constraint firstItem="Q8C-Qi-RGM" firstAttribute="top" secondItem="nY5-sV-gGj" secondAttribute="bottom" constant="44" id="BEB-YB-4uS"/>
+                            <constraint firstItem="3P4-xa-L6l" firstAttribute="top" secondItem="Q8C-Qi-RGM" secondAttribute="bottom" constant="20" id="CQi-tY-vmV"/>
+                            <constraint firstItem="nY5-sV-gGj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="293" id="cFw-TJ-gPz"/>
+                            <constraint firstItem="3P4-xa-L6l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f9W-B2-de3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nY5-sV-gGj" secondAttribute="trailing" constant="30" id="kGs-ud-2HS"/>
+                            <constraint firstItem="nY5-sV-gGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="yba-gG-7W1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="j0Q-cz-rRM"/>
+                    <connections>
+                        <outlet property="logInButton" destination="Q8C-Qi-RGM" id="JTF-GH-nCs"/>
+                        <outlet property="loginTF" destination="q6l-Gg-Hmr" id="Wjs-dP-w5m"/>
+                        <outlet property="passwordTF" destination="aZ2-dJ-ubz" id="jui-9f-HdH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
+        </scene>
+        <!--Coffee Menu View Controller-->
+        <scene sceneID="els-nz-IfU">
+            <objects>
+                <viewController id="yeR-2n-qS0" customClass="CoffeeMenuViewController" customModule="CoffeeCatalog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4I8-iY-7KV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Найди свой вкусный кофе" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viw-8u-jY0">
+                                <rect key="frame" x="50" y="165" width="314" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Pmp-lM-sTj">
+                                <rect key="frame" x="20" y="217" width="374" height="505"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cYc-ZC-Ddw">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Americano" translatesAutoresizingMaskIntoConstraints="NO" id="jgW-dW-seH">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsR-Ks-9oS">
+                                                <rect key="frame" x="156.5" y="0.0" width="81" height="50"/>
+                                                <state key="normal" title="Американо"/>
+                                                <connections>
+                                                    <action selector="americanoButton:" destination="0o1-A9-Deq" eventType="touchUpInside" id="bZJ-bb-9IY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40q-HJ-Joy">
+                                                <rect key="frame" x="344" y="0.0" width="30" height="50"/>
+                                                <state key="normal" title="💙"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Iu5-Mu-RU6">
+                                        <rect key="frame" x="0.0" y="65" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cappuccino" translatesAutoresizingMaskIntoConstraints="NO" id="Y2H-Mt-SHf">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-Sg-2mh">
+                                                <rect key="frame" x="161.5" y="0.0" width="78" height="50"/>
+                                                <state key="normal" title="Каппучино"/>
+                                                <connections>
+                                                    <action selector="cappuccinoButton:" destination="0o1-A9-Deq" eventType="touchUpInside" id="fNh-hf-fCS"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swt-oM-BfQ">
+                                                <rect key="frame" x="351" y="0.0" width="23" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cbl-s5-fj1">
+                                        <rect key="frame" x="0.0" y="130" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chocolate" translatesAutoresizingMaskIntoConstraints="NO" id="lMI-lS-UBf">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj9-F6-0j3">
+                                                <rect key="frame" x="137.5" y="0.0" width="126" height="50"/>
+                                                <state key="normal" title="Горячий шоколад"/>
+                                                <connections>
+                                                    <action selector="chocolateButton:" destination="0o1-A9-Deq" eventType="touchUpInside" id="I1e-CK-9TG"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAl-0j-zEL">
+                                                <rect key="frame" x="351" y="0.0" width="23" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fnD-io-zIk">
+                                        <rect key="frame" x="0.0" y="195" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cocoa" translatesAutoresizingMaskIntoConstraints="NO" id="87R-aj-gdi">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpZ-Pc-UxE">
+                                                <rect key="frame" x="179" y="0.0" width="43" height="50"/>
+                                                <state key="normal" title="Какао"/>
+                                                <connections>
+                                                    <action selector="cocoaButton:" destination="0o1-A9-Deq" eventType="touchUpInside" id="gPY-Vv-bit"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjO-4e-el9">
+                                                <rect key="frame" x="351" y="0.0" width="23" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0DD-OI-4lT">
+                                        <rect key="frame" x="0.0" y="260" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Espresso" translatesAutoresizingMaskIntoConstraints="NO" id="uU1-7f-8HS">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdM-66-0Vg">
+                                                <rect key="frame" x="165" y="0.0" width="71" height="50"/>
+                                                <state key="normal" title="Эспрессо"/>
+                                                <connections>
+                                                    <action selector="espressoButton:" destination="0o1-A9-Deq" eventType="touchUpInside" id="hqK-4e-H3i"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2f-RE-rvu">
+                                                <rect key="frame" x="351" y="0.0" width="23" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="PQQ-Xh-s3b">
+                                        <rect key="frame" x="0.0" y="325" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Latte" translatesAutoresizingMaskIntoConstraints="NO" id="DsN-Ys-A1N">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3Y-z2-LnI">
+                                                <rect key="frame" x="179.5" y="0.0" width="42" height="50"/>
+                                                <state key="normal" title="Латте"/>
+                                                <connections>
+                                                    <action selector="latteButton:" destination="0o1-A9-Deq" eventType="touchUpInside" id="O4R-kZ-H6o"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSV-yr-338">
+                                                <rect key="frame" x="351" y="0.0" width="23" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bhx-mB-3jV">
+                                        <rect key="frame" x="0.0" y="390" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Macchiato" translatesAutoresizingMaskIntoConstraints="NO" id="NwG-WY-whX">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCd-gY-RnZ">
+                                                <rect key="frame" x="169" y="0.0" width="63" height="50"/>
+                                                <state key="normal" title="Мачиато"/>
+                                                <connections>
+                                                    <action selector="macchiatoButton:" destination="0o1-A9-Deq" eventType="touchUpInside" id="Irk-oW-KYH"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbI-Yp-hFi">
+                                                <rect key="frame" x="351" y="0.0" width="23" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Zqs-oI-L3w">
+                                        <rect key="frame" x="0.0" y="455" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mocha" translatesAutoresizingMaskIntoConstraints="NO" id="bOQ-xA-Ncx">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntc-ad-bEi">
+                                                <rect key="frame" x="177.5" y="0.0" width="46" height="50"/>
+                                                <state key="normal" title="Мокка"/>
+                                                <connections>
+                                                    <action selector="mochaButton:" destination="0o1-A9-Deq" eventType="touchUpInside" id="zkn-eE-MEy"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8x-Z2-QJs">
+                                                <rect key="frame" x="351" y="0.0" width="23" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KzJ-wF-ix2"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="viw-8u-jY0" firstAttribute="top" secondItem="KzJ-wF-ix2" secondAttribute="top" constant="25" id="47Q-zI-oUg"/>
+                            <constraint firstItem="KzJ-wF-ix2" firstAttribute="trailing" secondItem="Pmp-lM-sTj" secondAttribute="trailing" constant="20" id="KI1-6D-yU0"/>
+                            <constraint firstItem="viw-8u-jY0" firstAttribute="leading" secondItem="KzJ-wF-ix2" secondAttribute="leading" constant="50" id="bz7-l6-iaq"/>
+                            <constraint firstItem="KzJ-wF-ix2" firstAttribute="trailing" secondItem="viw-8u-jY0" secondAttribute="trailing" constant="50" id="iZz-Uh-wdc"/>
+                            <constraint firstItem="Pmp-lM-sTj" firstAttribute="top" secondItem="viw-8u-jY0" secondAttribute="bottom" constant="30" id="mfn-z3-9s1"/>
+                            <constraint firstItem="Pmp-lM-sTj" firstAttribute="leading" secondItem="KzJ-wF-ix2" secondAttribute="leading" constant="20" id="yCO-z9-KGW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ceV-tr-lCs"/>
+                    <connections>
+                        <outlet property="americanoLikedOutlet" destination="40q-HJ-Joy" id="GGc-1J-4t9"/>
+                        <outlet property="cappucinoLikedLabel" destination="Swt-oM-BfQ" id="GFC-ZB-HHR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fM-dF-1OH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0o1-A9-Deq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vV0-JY-ixL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kJl-Yw-Li8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="pOd-ze-G5p">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Zy-Th-EDF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOO-br-w7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Americano" width="50" height="50"/>
+        <image name="Cappuccino" width="50" height="50"/>
+        <image name="Chocolate" width="50" height="50"/>
+        <image name="Cocoa" width="50" height="50"/>
+        <image name="Espresso" width="50" height="50"/>
+        <image name="Latte" width="50" height="50"/>
+        <image name="Macchiato" width="50" height="50"/>
+        <image name="Mocha" width="50" height="50"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

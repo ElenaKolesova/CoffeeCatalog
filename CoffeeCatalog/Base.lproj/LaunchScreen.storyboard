@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="l2L-iG-1GA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nmt-SL-izQ">
+                                <rect key="frame" x="101.5" y="365" width="211" height="166"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgB-uQ-PJ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="211" height="120"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="75"/>
+                                        <color key="textColor" red="0.97352153060000002" green="0.81951355930000003" blue="0.68600982430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сatalog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkO-qJ-P0f">
+                                        <rect key="frame" x="0.0" y="120" width="211" height="46"/>
+                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="35"/>
+                                        <color key="textColor" red="0.9546692967" green="0.82913976909999998" blue="0.68897515539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.26874810459999998" green="0.2317623496" blue="0.208109349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="l2L-iG-1GA" secondAttribute="trailing" id="PgX-Oc-Goa"/>
+                            <constraint firstItem="nmt-SL-izQ" firstAttribute="centerX" secondItem="l2L-iG-1GA" secondAttribute="centerX" id="c7p-4l-pz3"/>
+                            <constraint firstItem="nmt-SL-izQ" firstAttribute="centerY" secondItem="l2L-iG-1GA" secondAttribute="centerY" id="l8O-b0-GgW"/>
+                            <constraint firstItem="l2L-iG-1GA" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="rqc-JP-7xH"/>
+                            <constraint firstItem="l2L-iG-1GA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="xbj-SM-b2g"/>
+                            <constraint firstAttribute="bottom" secondItem="l2L-iG-1GA" secondAttribute="bottom" id="zmj-jf-tKE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wallpaper.jpg" width="871" height="2328"/>
+    </resources>
+</document>
